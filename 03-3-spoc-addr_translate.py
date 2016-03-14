@@ -3,12 +3,12 @@ def get_page_table_info(str):
     pa = int(str[-10:], 16)
     pde_index = va >> 22
     if(pde_index >= 0x300 & pde_index <= 0x363):
-        pde_content = pde_index-0x300+1
+        pde_content = (pde_index-0x300+1) << 12 + 3
     else:
-        pde_content = -1
+        pde_content = 0
         
     pte_index = (va >> 12) & 0x3FF
-    pte_content = pa >> 12
+    pte_content = (pa >> 12) << 12 + 3
     
     print '%s, pde_idx 0x%08x, pde_ctx 0x%08x, pte_idx 0x%08x, pte_ctx 0x%08x' % (str, pde_index, pde_content, pte_index, pte_content)
     
