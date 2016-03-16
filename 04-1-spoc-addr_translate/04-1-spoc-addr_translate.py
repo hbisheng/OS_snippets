@@ -20,13 +20,7 @@ def translate_addr(va):
     
     if( not(pde_content & 0x80) ):
         print ' pde contents:(valid 0, pfn '+ hex(pde_content&0x7f) + ')'
-        
-        PFN = pde_content & 0x7f
-        if(PFN == 0x7f):
-            print '      --> Fault (memory mapping not exist: data is not in disk)\n'    
-        else:        
-            print '      --> Fault (memory mapping not exist)\n'    
-        return
+        print '      --> Fault (PDE entry not valid)\n'
     
     print ' pde contents:(valid 1, pfn ' + hex(pde_content&0x7f) + ')'
     
@@ -40,9 +34,12 @@ def translate_addr(va):
     if(not(pte_content & 0x80)):
         pte_content &= 0x7f
         print ' pte contents:(valid 0, pfn '+ hex(pte_content&0x7f) +')'
-        val = get_disk_data(pte_content, offset)
-        print '      --> To Disk Vector Address ' + hex( (pte_content << 5) + offset) + ' --> value:', hex(val), '\n'
         
+        if(pte_content == 0x7f):
+            print '      --> Fault (Data is not in disk)\n'
+        else:
+            val = get_disk_data(pte_content, offset)
+            print '      --> To Disk Vector Address ' + hex( (pte_content << 5) + offset) + ' --> value:', hex(val), '\n'
     else:
         pte_content &= 0x7f
         print ' pte contents:(valid 1, pfn '+ hex(pte_content&0x7f) +')'
