@@ -61,7 +61,6 @@ if  __name__ == "__main__":
     page_size = 32
     PDBR = 0xd80 / page_size #the page that the PDBR is in
     
-    translate_addr(0x0330)
     translate_addr(0x6653)
     translate_addr(0x1c13)
     translate_addr(0x6890)
