@@ -27,6 +27,6 @@ for i in range(0, len(input)):
         else:
             # just add the missing page
             pages_lastHit[visitPage] = i+1
-          = i+1
+        lastPF = i+1
     print ""
     print pages_lastHit
