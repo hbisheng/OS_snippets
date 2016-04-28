@@ -1,0 +1,55 @@
+              Agency       Tabacco_owner         Paper_owner        Match_owener
+             Wakeup!
+ Place tobacco&match
+  Wakeup paper owner
+                                          Grab tobacco&match
+                                                    Smoke...
+                                                Wakeup agent
+             Wakeup!
+   Place paper&match
+Wakeup tobacco owner
+                        Grab paper&match
+                                Smoke...
+                            Wakeup agent
+             Wakeup!
+   Place paper&match
+Wakeup tobacco owner
+                        Grab paper&match
+                                Smoke...
+                            Wakeup agent
+             Wakeup!
+ Place tobacco&paper
+  Wakeup match owner
+                                                              Grab tobacco&paper
+                                                                        Smoke...
+                                                                    Wakeup agent
+             Wakeup!
+   Place paper&match
+Wakeup tobacco owner
+                        Grab paper&match
+                                Smoke...
+                            Wakeup agent
+             Wakeup!
+   Place paper&match
+Wakeup tobacco owner
+                        Grab paper&match
+                                Smoke...
+                            Wakeup agent
+             Wakeup!
+ Place tobacco&paper
+  Wakeup match owner
+                                                              Grab tobacco&paper
+                                                                        Smoke...
+                                                                    Wakeup agent
+             Wakeup!
+ Place tobacco&match
+  Wakeup paper owner
+                                          Grab tobacco&match
+                                                    Smoke...
+                                                Wakeup agent
+             Wakeup!
+ Place tobacco&paper
+  Wakeup match owner
+                                                              Grab tobacco&paper
+                                                                        Smoke...
+                                                                    Wakeup agent
